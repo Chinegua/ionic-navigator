@@ -19,19 +19,19 @@ export class Pagina2Page {
   personajes:any[] = [
     {
       nombre:"Yoda",
-      color: "Verde"
+      color: "verde"
     },
     {
       nombre:"Kylo Ren",
-      color:"Rojo"
+      color:"rojo"
     },
     {
       nombre:"Mace Windu",
-      color:"Morado"
+      color:"morado"
     },
     {
       nombre:"Rey",
-      color:"Azul"
+      color:"azul"
     }
   ];
 
