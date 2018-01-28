@@ -12,19 +12,19 @@
 
 </ion-header>
 
-<h1>Enviando por función</h1>
 
-<ion-content >
+<ion-content>
+  <h1>Enviando por función</h1>
   <ion-list>
     <ion-item *ngFor="let personaje of personajes" (click)="irPagina3( personaje )">
       {{personaje.nombre}}
     </ion-item>
   </ion-list>
-<!--Forma de pasar parametros a otra pagina desde el html-->
-<h1>Enviando con html</h1>
-    <ion-list>
-      <ion-item *ngFor="let personaje of personajes" [navPush]="pagina3" [navParams]="{ 'personaje': personaje }">
-        {{personaje.nombre}}
-      </ion-item>
-    </ion-list>
+  <!--Forma de pasar parametros a otra pagina desde el html-->
+  <h1>Enviando con html</h1>
+  <ion-list>
+    <ion-item *ngFor="let personaje of personajes" [navPush]="pagina3" [navParams]="{ 'personaje': personaje }">
+      {{personaje.nombre}}
+    </ion-item>
+  </ion-list>
 </ion-content>
