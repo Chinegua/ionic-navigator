@@ -8,11 +8,24 @@
 
   <ion-navbar>
     <ion-title>ajustes</ion-title>
+
+    <ion-buttons>
+        <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <h1>No hay ajustes disponibles</h1>
+  <button ion-button block (click)="volverTabInicio()">
+    Volver a inicio
+  </button>
+  <button ion-button block (click)="mostrarModal()">
+    Mostrar Modal
+  </button>
 
 </ion-content>

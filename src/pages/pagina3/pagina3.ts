@@ -21,6 +21,15 @@ export class Pagina3Page {
     this.personajes = this.navParams.data.personaje;
   }
 
+  irAtras(){
+    console.log("Atras");
+    this.navCtrl.pop()
+  }
+  irOrigen(){
+    console.log("Origen");
+
+    this.navCtrl.popToRoot();
+  }
 
 
 }

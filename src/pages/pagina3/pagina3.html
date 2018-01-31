@@ -18,4 +18,16 @@
     El sable de {{personajes.nombre}} es de color {{personajes.color}}
   </p>
 
+  <button ion-button block [color]="personajes.color" (click)="irAtras()">
+    Ir atrás
+  </button>
+
+  <button ion-button block color="dark" (click)="irOrigen()">
+      Ir a origen
+  </button>
+  <button ion-button block color="dark" navPop>
+      Ir atras - HTML
+  </button>
+
+
 </ion-content>

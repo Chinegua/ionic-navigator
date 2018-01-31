@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController} from 'ionic-angular';
+import { ModalPage } from "../modal/modal";
 
 /**
  * Generated class for the AjustesPage page.
@@ -14,11 +15,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AjustesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AjustesPage');
+  volverTabInicio(){ //Esta funcion se diferencia de las otras maneras de pegar saltos en que tambien nos moveremos en el tab
+    this.navCtrl.parent.select(0);
+
   }
+
+  mostrarModal(){
+    console.log("Mostrando el modal");
+    let modal = this.modalCtrl.create(ModalPage,{ nombre: "Aitor", edad: 21 });
+    modal.present();
+    modal.onDidDismiss(parametros => {
+      console.log(parametros);
+    });
+  }
+
 
 }
